@@ -23,7 +23,7 @@ export class MiddlewareService {
 
 export class cubeClickMiddleware implements Middleware {
   process(context: any): any {
-    if (context.type === 'cubeClick') {
+    if (context.type === 'cubeClick') { // set the cube's color when clicked, then reset
       const cube = document.getElementById("cube")
       if (cube) {
         cube.style.background = "#0091a4";
@@ -32,10 +32,10 @@ export class cubeClickMiddleware implements Middleware {
         }, 100);
       }
     }
-    if (context.type === 'cubeClick' && context.speed <= 0.4) {
+    if (context.type === 'cubeClick' && context.speed <= 0.4) { // increase the cube's speed until 0,4
       context.speed += 0.005;
     }
-    if (context.type === 'cubeClick' && context.changeHorizontalChance <= 0.01) {
+    if (context.type === 'cubeClick' && context.changeHorizontalChance <= 0.01) { // increase the chance of direction change until 0.01
       context.changeHorizontalChance += 0.00005
       context.changeVerticalChance += 0.00005
     }
