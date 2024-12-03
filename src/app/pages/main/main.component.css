@@ -1,0 +1,61 @@
+.main-window {
+    position: relative;
+    background-color: silver;
+    max-width: 100%;
+    max-height: 90%;
+    aspect-ratio: 16/9;
+}
+
+#cube {
+    position: absolute;
+    background-color: #007180;
+    width: 9%;
+    height: 16%;
+    z-index: 100;
+    left: 0%;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: min(6vw,6vh);
+    user-select: none;
+    color: white;
+    transition: all 0.1 ease-in-out;
+    cursor: pointer;
+}
+
+#timer {
+    background-color: #2fff5f;
+    width: 100%;
+    height: 10%;
+    font-size: min(6vw, 6vh);
+    text-align: center;
+    font-weight: bold;
+    user-select: none;
+    transition: all 0.5s ease-in-out;
+}
+
+#start-game {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+    height: 10%;
+    background-color: red;
+    font-size: min(4vh, 4vw);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    z-index: 200;
+}
+
+#start-game:hover {
+    background-color: rgb(197, 0, 0);
+}

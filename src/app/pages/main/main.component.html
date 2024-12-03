@@ -1,0 +1,6 @@
+<div id="timer">{{gameState.timeLeft <= 0 ? "Game Over, your score: " + gameState.score : gameState.timeLeft.toFixed(1)}}</div>
+
+<div class="main-window">
+    <div *ngIf="showStartButton" id="start-game" (click)="startGame()">Start game</div>
+    <div id="cube" class="cube" (click)="clickedOnCube()"><span id="score">{{gameState.score}}</span></div>
+</div>
