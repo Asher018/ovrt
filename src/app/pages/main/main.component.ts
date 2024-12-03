@@ -82,8 +82,6 @@ export class MainComponent implements OnInit {
   }
 
   clickedOnCube() {
-    if (this.gameState.timeLeft <= 0) {return;}
-
     const context = {
       type: 'cubeClick', 
       speed: this.speed,
