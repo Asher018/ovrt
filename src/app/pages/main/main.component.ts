@@ -25,12 +25,10 @@ export class MainComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     this.middlewareService.use(new cubeClickMiddleware());
     this.gameState.subscribeToScore((newScore) => {
-      console.log('Score updated:', newScore);
       this.updateScoreDisplay(newScore);
     });
 
     this.gameState.subscribeToTimeLeft((newTimeLeft) => {
-      console.log('Time Left updated:', newTimeLeft);
       this.updateTimerDisplay(newTimeLeft);
     });
   }
@@ -115,13 +113,11 @@ export class MainComponent implements OnInit {
     }
     const timer = document.getElementById("timer");
     if (timer) {
-      console.log("updating")
       timer.style.backgroundColor = "#2fff5f;";
     }
   }
 
   updateScoreDisplay(newScore: number) {
-    console.log(newScore)
     const score = document.getElementById("score");
     if (!score) {return;}
     score.style.transform = `rotateZ(${newScore}deg)`;
